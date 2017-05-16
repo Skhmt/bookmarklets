@@ -8,8 +8,6 @@ javascript: {
 	let newURL = `https://${publisher}.gallery.vsassets.io/_apis/public/gallery/publisher/${publisher}`;
 	newURL += `/extension/${extension}/${version}/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage`;
 
-	/* http://stackoverflow.com/questions/7526849/ */
-
 	fetch(newURL).then(res => res.blob()).then(myBlob => {
 		const a = document.createElement('a');
 		a.href = window.URL.createObjectURL(myBlob);
@@ -17,3 +15,7 @@ javascript: {
 		a.click();
 	});
 }
+/*
+	https://code.visualstudio.com/docs/editor/extension-gallery#_common-questions
+	http://stackoverflow.com/questions/7526849/
+*/
