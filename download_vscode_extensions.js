@@ -1,4 +1,4 @@
-javascript: {
+javascript:
 	const vss_extension = JSON.parse(document.getElementsByClassName('vss-extension')[0].innerHTML);
 
 	const publisher = vss_extension.publisher.publisherName;
@@ -21,4 +21,3 @@ javascript: {
 		a.click();
 	};
 	xhr.send();
-};
