@@ -1,23 +1,24 @@
 javascript:
-	const vss_extension = JSON.parse(document.getElementsByClassName('vss-extension')[0].innerHTML);
 
-	const publisher = vss_extension.publisher.publisherName;
-	const extension = vss_extension.extensionName;
-	const version = vss_extension.versions[0].version;
+const vss_extension = JSON.parse(document.getElementsByClassName('vss-extension')[0].innerHTML);
 
-	const newURL = `https://${publisher}.gallery.vsassets.io/_apis/public/gallery/publisher/${publisher}/extension/${extension}/${version}/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage`;
+const publisher = vss_extension.publisher.publisherName;
+const extension = vss_extension.extensionName;
+const version = vss_extension.versions[0].version;
 
-	/* http://stackoverflow.com/questions/7526849/how-do-i-change-a-filename-on-download-with-javascript */
+const newURL = `https://${publisher}.gallery.vsassets.io/_apis/public/gallery/publisher/${publisher}/extension/${extension}/${version}/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage`;
 
-	let a = document.createElement('a');
-	let xhr = new XMLHttpRequest();
+/* http://stackoverflow.com/questions/7526849/how-do-i-change-a-filename-on-download-with-javascript */
 
-	xhr.open('GET', newURL, true);
-	xhr.responseType = 'blob';
-	xhr.onload = () => {
-		const file = new Blob([xhr.response], { type : 'application/octet-stream' });
-		a.href = window.URL.createObjectURL(file);
-		a.download = `${publisher}_${extension}_${version}.vsix`;
-		a.click();
-	};
-	xhr.send();
+let a = document.createElement('a');
+let xhr = new XMLHttpRequest();
+
+xhr.open('GET', newURL, true);
+xhr.responseType = 'blob';
+xhr.onload = () => {
+	const file = new Blob([xhr.response], { type : 'application/octet-stream' });
+	a.href = window.URL.createObjectURL(file);
+	a.download = `${publisher}_${extension}_${version}.vsix`;
+	a.click();
+};
+xhr.send();
