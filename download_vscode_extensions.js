@@ -1,20 +1,19 @@
-javascript: 
+javascript: {
+	const vss_extension = JSON.parse(document.getElementsByClassName('vss-extension')[0].innerHTML);
 
-const vss_extension = JSON.parse(document.getElementsByClassName('vss-extension')[0].innerHTML);
+	const publisher = vss_extension.publisher.publisherName;
+	const extension = vss_extension.extensionName;
+	const version = vss_extension.versions[0].version;
 
-const publisher = vss_extension.publisher.publisherName;
-const extension = vss_extension.extensionName;
-const version = vss_extension.versions[0].version;
+	let newURL = `https://${publisher}.gallery.vsassets.io/_apis/public/gallery/publisher/${publisher}`;
+	newURL += `/extension/${extension}/${version}/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage`;
 
-let newURL = `https://${publisher}.gallery.vsassets.io/_apis/public/gallery/publisher/${publisher}`;
-newURL += `/extension/${extension}/${version}/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage`;
+	/* http://stackoverflow.com/questions/7526849/ */
 
-/* http://stackoverflow.com/questions/7526849/ */
-
-const a = document.createElement('a');
-
-fetch(newURL).then(res => res.blob()).then(myBlob => {
-	a.href = window.URL.createObjectURL(myBlob);
-	a.download = `${publisher}_${extension}_${version}.vsix`;
-	a.click();
-});
+	fetch(newURL).then(res => res.blob()).then(myBlob => {
+		const a = document.createElement('a');
+		a.href = window.URL.createObjectURL(myBlob);
+		a.download = `${publisher}_${extension}_${version}.vsix`;
+		a.click();
+	});
+}
