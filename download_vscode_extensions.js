@@ -21,5 +21,4 @@ javascript: {
 		a.click();
 	};
 	xhr.send();
-
 };
