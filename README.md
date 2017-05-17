@@ -3,6 +3,7 @@
 ## Manual install
 
 1. Find a bookmarklet
+1. Copy it
 1. Right click your bookmark bar
 1. Select `Add Page`
 1. Paste the bookmarklet into the `URL:` field
