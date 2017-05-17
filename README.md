@@ -18,3 +18,4 @@
    * It is a good practice, however strictly unnecessary, to wrap your code in curly braces like this: `javascript: { /*code here*/ }`
 * If you share your bookmarklets, putting them into a link makes it easy for users to save, but you have to be careful about your use of `'` or `"`
 * If you share your bookmarklets on a place with markdown, you might have to be careful on your use of ES6 string template literals
+* While you _can_ use Closure Compiler, I'd really recommend leaving your code at least somewhat legible so the user has the chance to verify your code isn't malicious
