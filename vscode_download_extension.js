@@ -15,7 +15,3 @@ javascript: {
 		a.click();
 	});
 }
-/*
-	https://code.visualstudio.com/docs/editor/extension-gallery#_common-questions
-	http://stackoverflow.com/questions/7526849/
-*/
