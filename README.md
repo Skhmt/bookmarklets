@@ -1,6 +1,6 @@
-# Bookmarklets for Chrome
+# Bookmarklets
 
-## Manual install
+### Manual install
 
 1. Find a bookmarklet
 1. Copy it - don't worry about formatting, Chrome will automatically put it into a single line
@@ -10,7 +10,7 @@
 1. Choose a name and put it into the `Name:` field
 1. Hit `Save`
 
-## Tips on making your own bookmarklets
+### Tips on making your own bookmarklets
 
 * Semi-colons _are not optional_
 * Don't use single line comments (`//`) - multi-line comments (`/* ... */`) are fine but must appear at any point _after_ `javascript:`
