@@ -13,6 +13,7 @@
 ### Tips on making your own bookmarklets
 
 * Semi-colons _are not optional_
+* When a user pastes bookmarklet code into the `URL:` field of a bookmark, endlines are automatically removed - you can leave your code formatted for eligibility 
 * Don't use single line comments (`//`) - multi-line comments (`/* ... */`) are fine but must appear at any point _after_ `javascript:`
 * You do _not_ need to wrap it in an IIFE like this: `javascript: (function(){ /*code here*/ })();`
    * It is a good practice, however strictly unnecessary, to wrap your code in curly braces like this: `javascript: { /*code here*/ }` and use `let` and/or `const` rather than `var` to properly scope your bookmarklet
