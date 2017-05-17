@@ -14,7 +14,7 @@
 
 * Semi-colons _are not optional_
 * Don't use single line comments (`//`) - multi-line comments (`/* ... */`) are fine but must appear at any point _after_ `javascript:`
-* You do not need to wrap it in an IIFE like: `javascript: (function(){ /*code here*/ })();`
+* You do _not_ need to wrap it in an IIFE like: `javascript: (function(){ /*code here*/ })();`
    * It is a good practice, however, to wrap your code in curly braces like: `javascript: { /*code here*/ }`
 * If you share your bookmarklets, putting them into a link makes it easy for users to save, but you have to be careful about your use of `'` or `"`
 * If you share your bookmarklets on a place with markdown, you might have to be careful on your use of ES6 string template literals
