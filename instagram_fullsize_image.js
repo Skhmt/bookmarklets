@@ -1,9 +1,8 @@
 javascript: {
-    let metas = document.getElementsByTagName('meta');
-    for (let i in metas) {
-        if (metas[i].getAttribute('property') == 'og:image') {
-            location = metas[i].getAttribute('content').split('?')[0];
-            break;
-        }
+    const FFVADs = document.getElementsByClassName('FFVAD');
+    let output = '';
+    for (let i of FFVADs) {
+        output += `<img src="${i.src}">`;
     }
+    document.write(output);
 }
